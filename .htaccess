@@ -1,0 +1,20 @@
+DirectoryIndex index.php
+ 
+    RewriteEngine on
+ 
+    RewriteCond $1 !^(index\.php|images|stylesheets|system/application/sources/)
+ 
+    RewriteCond %{REQUEST_FILENAME} !-f
+ 
+    RewriteCond %{REQUEST_FILENAME} !-d
+ 
+    RewriteRule ^(.*)$ ./index.php/$1 [L,QSA]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# This domain inherits the “PHP” package.
+# php -- END cPanel-generated handler, do not edit
+
+
+<FilesMatch "\.(php4|php5|php3|php2|php|phtml)$">
+SetHandler application/x-httpd-alt-php72___lsphp
+</FilesMatch>
